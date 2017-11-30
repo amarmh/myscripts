@@ -1,0 +1,7 @@
+echo <%= input('action') %> host && sleep 3
+<%= case input('action')
+      when 'restart'
+        'reboot'
+      else
+        'shutdown -r now'
+      end %>
